@@ -1,4 +1,4 @@
-This is a copy of the lib directory of the genstage_test product related to stack overflow question:A
+This is a copy of the lib directory of the genstage_test project related to stack overflow question:
 
 https://stackoverflow.com/questions/52968929/runtime-dynamic-compute-graph-using-elixir-genstage
 
