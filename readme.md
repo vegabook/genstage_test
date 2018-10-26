@@ -36,3 +36,4 @@ defmodule GenstageTest.MixProject do
 end
 ```
 
+Note the `gen_stage` dependency. 
