@@ -6,12 +6,14 @@ defmodule GenstageTest.Consumer do
   end
 
   def init(state) do
-    {:consumer, state, subscribe_to: [GenstageTest.PcDivTwo]}
+    {:consumer, state}
   end
 
   def handle_events(events, _from, state) do
     for event <- events do
-      IO.inspect({self(), event, state})
+      File.write("/home/tbrowne/scratch/output.txt", 
+        Kernel.inspect(event) <> " ", [:append])
+      :timer.sleep(100)
     end
 
     # As a consumer we never emit events

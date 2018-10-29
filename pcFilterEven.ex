@@ -8,7 +8,7 @@ defmodule GenstageTest.PcFilterEven do
   end
 
   def init(state) do
-    {:producer_consumer, state, subscribe_to: [GenstageTest.PcSubSeven]}
+    {:producer_consumer, state}
   end
 
   def handle_events(events, _from, state) do

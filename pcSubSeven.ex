@@ -6,7 +6,7 @@ defmodule GenstageTest.PcSubSeven do
   end
 
   def init(state) do
-    {:producer_consumer, state, subscribe_to: [GenstageTest.PcTimesFive]}
+    {:producer_consumer, state}
   end
 
   def handle_events(events, _from, state) do

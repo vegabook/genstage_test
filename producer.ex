@@ -11,4 +11,15 @@ defmodule GenstageTest.Producer do
     events = Enum.to_list(state..(state + demand - 1))
     {:noreply, events, state + demand}
   end
+
+  def handle_info({:doprint}, state) do
+    IO.puts "yep"
+    {:noreply, [], state}
+  end
+
+  def handle_info({:cancel, sublink}, state) do
+    GenStage.cancel sublink, []
+    {:noreply, [], state}
+  end
+
 end
